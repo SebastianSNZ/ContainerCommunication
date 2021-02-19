@@ -9,7 +9,7 @@ app.post('/', (req, res) => {
     data['first'] = 'Server 1'
     const newData = JSON.stringify(data);
     const options = {
-        hostname: 'localhost',
+        hostname: 'cont-2',
         port: 5000,
         path: '/',
         method: 'POST',
@@ -25,7 +25,7 @@ app.post('/', (req, res) => {
         });
     });
     request.on('error', (error) => {
-        res.status(500).json(JSON.parse(error.toString()));
+        res.status(500).json(error.toString());
     });
     request.write(newData);
     request.end();
