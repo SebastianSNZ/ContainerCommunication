@@ -6,10 +6,10 @@ app.use(express.json({ extended: true }))
 
 app.post('/', (req, res) => {
     var data = req.body;
-    data['first'] = 'Server 1'
+    data['first'] = 'Server 1' 
     const newData = JSON.stringify(data);
     const options = {
-        hostname: 'contenedorcito-2',
+        hostname: 'localhost',
         port: 5000,
         path: '/',
         method: 'POST',

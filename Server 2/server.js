@@ -18,7 +18,7 @@ app.post('/', async (req, res) => {
     data['second'] = 'Server 2'
     let result = {};
     try {
-        let collection = db.collection("personita");
+        let collection = db.collection("estudiantes");
         let result = await collection.insertOne(data);
         res.json(result.ops[0]);
     } catch (err) {
