@@ -8,8 +8,6 @@ spec:
   rules:
   - http:
       paths:
-      - path: /so1
-        pathtype: Prefix
-        backend:
+      - backend:
           serviceName: lab-service
           servicePort: 3000
